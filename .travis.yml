@@ -9,8 +9,6 @@ addons:
   apt:
     packages:
       - texlive-latex-recommended
-      - texlive-latex-extra
-      - texlive-fonts-recommended
       - chktex
       - sshpass
 

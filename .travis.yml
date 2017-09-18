@@ -8,7 +8,8 @@ env:
 addons:
   apt:
     packages:
-      - texlive-latex-recommended
+      - texlive-latex-base
+      - texlive-latex-extra 
       - chktex
       - sshpass
 

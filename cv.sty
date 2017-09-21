@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage[english]{babel}
+
+% change appearance of lists
+\usepackage{enumitem}
+\setlist{%
+  nosep,
+}
+\setlist[itemize,1]{%
+  label={},
+  leftmargin=0em,
+}
+\setlist[itemize,2]{%
+  label={},
+  leftmargin=1em,
+  before*=\footnotesize,
+}
+\setlist[description,1]{%
+  font=\normalfont,
+  labelwidth=3em,
+  leftmargin=!,
+  labelsep=0pt,
+  labelindent=0pt,
+  align=left,
+}
+
+% suppress page numbering
+\pagestyle{empty}
+
+% suppress section numbers
+\setcounter{secnumdepth}{0}
+
+% modify header spacing
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\filcenter}{}{}{}{\filcenter}
+\titlespacing{\subsection}{0pt}{2\baselineskip}{\dimexpr-\parskip+\baselineskip}
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{-\parskip}
+
+\usepackage{longtable} % req'd by pandoc
+\usepackage{hyperref}  % ...
+
+% used by pandoc, but unnecessary
+\providecommand{\tightlist}{}
+
+% hide table border and adjust spacing after table
+\providecommand{\toprule}{}
+\providecommand{\bottomrule}{\vspace{.25\baselineskip}} % ...
+
+% make tables fill entire column, courtesy of
+%   https://tex.stackexchange.com/questions/144434/re-newing-a-column-type
+\usepackage{tabularx}
+\newcommand\undefcolumntype[1]{\expandafter\let\csname NC@find@#1\endcsname\relax}
+\newcommand\forcenewcolumntype[1]{\undefcolumntype{#1}\newcolumntype{#1}}
+\forcenewcolumntype{l}{>{\raggedright\arraybackslash}p{.5\textwidth}}
+\forcenewcolumntype{r}{>{\raggedleft\arraybackslash}p{.5\textwidth}}
+
+\usepackage{tabto}
+
+\begin{document}
+$body$
+\end{document}

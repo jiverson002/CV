@@ -10,70 +10,73 @@ jiverson002@csbsju.edu                                                      XXXX
 
 ## EDUCATION
 2010--2017
-: \tabto{3em}UNIVERSITY OF MINNESOTA, Minneapolis, MN
-: \tabto{3em}Ph.D. in Computer Science, Expected Fall 2017
-: \tabto{4em}Dissertation Adviser: George Karypis
-: \tabto{3em}M.S. in Computer Science, 2013\
+  : \tabto{3em}UNIVERSITY OF MINNESOTA, Minneapolis, MN
+  : \tabto{3em}Ph.D. in Computer Science, Expected Fall 2017
+  : \tabto{4em}Dissertation Adviser: George Karypis
+  : \tabto{3em}M.S. in Computer Science, 2013\
 
 2006--2010
-: \tabto{3em}SAINT JOHN'S UNIVERSITY, Collegeville, MN
-: \tabto{3em}B.A. in Computer Science, 2010
+  : \tabto{3em}SAINT JOHN'S UNIVERSITY, Collegeville, MN
+  : \tabto{3em}B.A. in Computer Science, 2010
 
 ## PUBLICATIONS
 ### Refereed Journal Articles
 2017
-: ``A Virtual Memory Manager Optimized for Node-level Cooperative Multi-tasking
-  in Memory Constrained Systems.''. Jeremy Iverson and George Karypis. *The
-  International Journal of High Performance Computing Applications*, 2017.
+  : ``A Virtual Memory Manager Optimized for Node-level Cooperative
+    Multi-tasking in Memory Constrained Systems.''. Jeremy Iverson and George
+    Karypis. *The International Journal of High Performance Computing
+    Applications*, 2017.
 
 2015
-: ``Evaluation of Connected-Component Labeling Algorithms for Distributed-Memory
-  Systems''. Jeremy Iverson, George Karypis, and Chandrika Kamath. *Parallel
-  Computing*, Volume 44, 53--68, 2015.
+  : ``Evaluation of Connected-Component Labeling Algorithms for
+    Distributed-Memory Systems''. Jeremy Iverson, George Karypis, and Chandrika
+    Kamath. *Parallel Computing*, Volume 44, 53--68, 2015.
 
 ### Book Chapters
 2014
-: ``Big Data Frequent Pattern Mining''. David Anastasiu, Jeremy Iverson, Shaden
-  Smith, and George Karypis. In *Frequent Pattern Mining*, Charu C. Aggarwal and
-  Jiawei Han (eds). Springer International Publishing, Switzerland, 2014.
+  : ``Big Data Frequent Pattern Mining''. David Anastasiu, Jeremy Iverson,
+    Shaden Smith, and George Karypis. In *Frequent Pattern Mining*, Charu C.
+    Aggarwal and Jiawei Han (eds). Springer International Publishing,
+    Switzerland, 2014.
 
 ### Conference Proceedings
 2015
-: ``A Memory Management System Optimized for BDMPI's Memory and Execution
-  Model''. Jeremy Iverson and George Karypis. EuroMPI 2015.
+  : ``A Memory Management System Optimized for BDMPI's Memory and Execution
+    Model''. Jeremy Iverson and George Karypis. EuroMPI 2015.
 
 2012
-: ``Fast and Effective Lossy Compression Algorithms for Scientific Datasets''.
-  Jeremy Iverson, Chandrika Kamath, and George Karypis. Euro-Par 2012: 843--856.
+  : ``Fast and Effective Lossy Compression Algorithms for Scientific Datasets''.
+    Jeremy Iverson, Chandrika Kamath, and George Karypis. Euro-Par 2012:
+    843--856.
 
 2010
-: ``Using Metrics to Quantify Similarity in Source Code: An Empirical Study
-  Using VOCS''. Jeremy Iverson, James Schnepf, and Imad Rahal. SEDE 2010:
-  269--274.
+  : ``Using Metrics to Quantify Similarity in Source Code: An Empirical Study
+    Using VOCS''. Jeremy Iverson, James Schnepf, and Imad Rahal. SEDE 2010:
+    269--274.
 
 ### Technical Reports
 2014
-: ``Storing Dynamic Graphs: Speed vs. Storage Trade-offs''. Jeremy Iverson and
-  George Karypis. University of Minnesota Technical Report TR14-018, 2014.
+  : ``Storing Dynamic Graphs: Speed vs. Storage Trade-offs''. Jeremy Iverson and
+    George Karypis. University of Minnesota Technical Report TR14-018, 2014.
 
 2012
-: ``Detection of Coherent Structures in Extreme-Scale Simulations''. Chandrika
-Kamath, Jeremy Iverson, and George Karypis. Lawrence Livermore National
-Laboratory Technical Report LLNL-CONF-541611, 2012.
+  : ``Detection of Coherent Structures in Extreme-Scale Simulations''. Chandrika
+    Kamath, Jeremy Iverson, and George Karypis. Lawrence Livermore National
+    Laboratory Technical Report LLNL-CONF-541611, 2012.
 
 ## CONFERENCE PARTICIPATION
 ### Papers Presented
 2015
-: ``A Memory Management System Optimized for BDMPI's Memory and Execution
-  Model''. EuroMPI, September 21--23.
+  : ``A Memory Management System Optimized for BDMPI's Memory and Execution
+    Model''. EuroMPI, September 21--23.
 
 2012
-: ``Fast and Effective Lossy Compression Algorithms for Scientific Datasets''.
-  Euro-Par, August 27--31.
+  : ``Fast and Effective Lossy Compression Algorithms for Scientific Datasets''.
+    Euro-Par, August 27--31.
 
 2010
-: ``Using Metrics to Quantify Similarity in Source Code: An Empirical Study
-  Using VOCS''. SEDE, June 16--18.
+  : ``Using Metrics to Quantify Similarity in Source Code: An Empirical Study
+    Using VOCS''. SEDE, June 16--18.
 
 ## TEACHING EXPERIENCE
 ### Saint John's University, Collegeville, MN
@@ -92,13 +95,13 @@ Laboratory Technical Report LLNL-CONF-541611, 2012.
 
 ## SERVICES TO PROFESSION
 2014
-: Reviewer for *Transactions on Knowledge Discovery from Data*.
+  : Reviewer for *Transactions on Knowledge Discovery from Data*.
 
 2014
-: Reviewer for *Transactions on Services Computing*.
+  : Reviewer for *Transactions on Services Computing*.
 
 2013
-: Reviewer for *Transactions on Knowledge and Data Engineering*.
+  : Reviewer for *Transactions on Knowledge and Data Engineering*.
 
 2012
-: Reviewer for *Journal of Parallel and Distributed Computing*.
+  : Reviewer for *Journal of Parallel and Distributed Computing*.

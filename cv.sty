@@ -39,14 +39,16 @@
 \titlespacing{\subsubsection}{0pt}{\baselineskip}{-\parskip}
 
 \usepackage{longtable} % req'd by pandoc
+\usepackage{booktabs}  % ...
 \usepackage{hyperref}  % ...
 
 % used by pandoc, but unnecessary
 \providecommand{\tightlist}{}
 
 % hide table border and adjust spacing after table
-\providecommand{\toprule}{}
-\providecommand{\bottomrule}{\vspace{.25\baselineskip}} % ...
+\renewcommand{\toprule}{}
+\renewcommand{\addlinespace}{}
+\renewcommand{\bottomrule}{\vspace{.25\baselineskip}} % ...
 
 % make tables fill entire column, courtesy of
 %   https://tex.stackexchange.com/questions/144434/re-newing-a-column-type

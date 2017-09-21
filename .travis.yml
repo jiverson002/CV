@@ -17,7 +17,7 @@ addons:
 script:
   - pandoc --version
   - sed 's/\[\!\[Build Status\].*//' README.md > travis1.md
-  - sed 's/  $//g' travis1.md > traivs2.md
+  - sed 's/  $//g' travis1.md > travis2.md
   - pandoc --template cv.sty -o cv.tex travis2.md
   - chktex -W # Print version information.
   - chktex -q -n 8 cv.tex 2>/dev/null | tee lint.out

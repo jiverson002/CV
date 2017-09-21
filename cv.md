@@ -94,10 +94,17 @@ jiverson002@csbsju.edu                                                      XXXX
     + Lead weekly recitations, held office hours, and graded assignments.
 
 ## SERVICES TO PROFESSION
-2014
-  : Reviewer for *Transactions on Knowledge Discovery from Data*.
+2016
+  : Reviewer for *International Conference on Data Mining*.
+  : Reviewer for *Data Analytics and Management in Data Intensive Domains*.
+  : Reviewer for *Transactions on Parallel Computing*.
+
+2015
+  : Reviewer for *International Conference on Big Data*.
 
 2014
+  : Reviewer for *Transactions on Computers*.
+  : Reviewer for *Transactions on Knowledge Discovery from Data*.
   : Reviewer for *Transactions on Services Computing*.
 
 2013

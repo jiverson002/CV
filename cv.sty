@@ -21,8 +21,8 @@
   font=\normalfont,
   labelwidth=3em,
   leftmargin=!,
-  labelsep=0pt,
-  labelindent=0pt,
+  labelsep=0em,
+  labelindent=0em,
   align=left,
 }
 
@@ -32,32 +32,37 @@
 % suppress section numbers
 \setcounter{secnumdepth}{0}
 
+% prevent latex from breaking items across pages
+\interlinepenalty10000
+
 % modify header spacing
 \usepackage{titlesec}
 \titleformat{\section}{\Large\bfseries\filcenter}{}{}{}{\filcenter}
 \titlespacing{\subsection}{0pt}{2\baselineskip}{\dimexpr-\parskip+\baselineskip}
 \titlespacing{\subsubsection}{0pt}{\baselineskip}{-\parskip}
 
-\usepackage{longtable} % req'd by pandoc
-\usepackage{booktabs}  % ...
-\usepackage{hyperref}  % ...
-
 % used by pandoc, but unnecessary
 \providecommand{\tightlist}{}
 
-% hide table border and adjust spacing after table
-\renewcommand{\toprule}{}
-\renewcommand{\addlinespace}{}
-\renewcommand{\bottomrule}{\vspace{.25\baselineskip}} % ...
-
-% make tables fill entire column, courtesy of
+% undefine a column type, courtesy of
 %   https://tex.stackexchange.com/questions/144434/re-newing-a-column-type
-\usepackage{tabularx}
 \newcommand\undefcolumntype[1]{\expandafter\let\csname NC@find@#1\endcsname\relax}
+
+% create a table environment which suppresses horizontal rules and fills column
+% width
+\usepackage{tabularx}
 \newcommand\forcenewcolumntype[1]{\undefcolumntype{#1}\newcolumntype{#1}}
 \forcenewcolumntype{l}{>{\raggedright\arraybackslash}p{.5\textwidth}}
 \forcenewcolumntype{r}{>{\raggedleft\arraybackslash}p{.5\textwidth}}
+\newenvironment{longtable}{\begin{tabular}}{\end{tabular}}
+\providecommand{\toprule}{}
+\providecommand{\addlinespace}{}
+\providecommand{\bottomrule}{}
 
+% this is a hack until i can find a way to use \tightlist to change the
+% \leftmargin of the description environment so that two different styles of
+% description lists can be provided -- it requires the use of \tabto{...} in the
+% markdown file
 \usepackage{tabto}
 
 \begin{document}

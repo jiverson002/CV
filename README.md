@@ -1,12 +1,11 @@
 # Jeremy L. Iverson [![Build Status](https://travis-ci.org/jiverson002/CV.svg?branch=master)](https://travis-ci.org/jiverson002/CV)
 
------------------------------------------------   ------------------------------
-213 Peter Engel Science Center                                              XXXX
-Saint John's University                                                     XXXX
-Collegeville, MN 56321-3000                                                 XXXX
-(320) 363-3083                                                    (XXX) XXX-XXXX
-jiverson002@csbsju.edu                                                      XXXX
------------------------------------------------   ------------------------------
+| 213 Peter Engel Science Center |           XXXX |
+|:-------------------------------|---------------:|
+| Saint John's University        |           XXXX |
+| Collegeville, MN 56321-3000    |           XXXX |
+| (320) 363-3083                 | (XXX) XXX-XXXX |
+| jiverson002@csbsju.edu         |           XXXX |
 
 ## EDUCATION
 2010--2017  

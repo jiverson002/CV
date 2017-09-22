@@ -23,17 +23,9 @@
 \providecommand{\tightlist}{
   \setlength\labelwidth{3em}
   \setlength\leftmargin{3em}
-  \advance\linewidth 4em
-  \advance\@totalleftmargin -4em
-  \parshape \@ne \@totalleftmargin \linewidth
-}
-\makeatother
-
-\usepackage{etoolbox}
-\makeatletter
-\AtBeginEnvironment{itemize}{%
-  \advance\linewidth -4em
-  \advance\@totalleftmargin 4em
+  \advance\linewidth4em
+  \advance\@totalleftmargin-4em
+  \parshape \@ne \@totalleftmargin\linewidth
 }
 \makeatother
 
@@ -44,11 +36,11 @@
 }
 \setlist[itemize,1]{%
   label={},
-  leftmargin=0em,
+  leftmargin=4em,
 }
 \setlist[itemize,2]{%
   label={},
-  leftmargin=0em,
+  leftmargin=4.25em,
   before*=\footnotesize,
 }
 \setlist[description,1]{%

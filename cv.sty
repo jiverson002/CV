@@ -50,14 +50,15 @@
 
 % create a table environment which suppresses horizontal rules and fills column
 % width
+\usepackage{longtable}
 \usepackage{tabularx}
 \newcommand\forcenewcolumntype[1]{\undefcolumntype{#1}\newcolumntype{#1}}
 \forcenewcolumntype{l}{>{\raggedright\arraybackslash}p{.5\textwidth}}
 \forcenewcolumntype{r}{>{\raggedleft\arraybackslash}p{.5\textwidth}}
-\newenvironment{longtable}{\begin{tabular}}{\end{tabular}}
 \providecommand{\toprule}{}
+\providecommand{\midrule}{}
+\providecommand{\bottomrule}{\\}
 \providecommand{\addlinespace}{}
-\providecommand{\bottomrule}{}
 
 % this is a hack until i can find a way to use \tightlist to change the
 % \leftmargin of the description environment so that two different styles of

@@ -9,14 +9,16 @@
 
 ## EDUCATION
 2010--2017  
-  : \tabto{3em}UNIVERSITY OF MINNESOTA, Minneapolis, MN  
-  : \tabto{3em}Ph.D. in Computer Science, Expected Fall 2017  
-  : \tabto{4em}Dissertation Adviser: George Karypis  
-  : \tabto{3em}M.S. in Computer Science, 2013\
+
+  : UNIVERSITY OF MINNESOTA, Minneapolis, MN  
+  : Ph.D. in Computer Science, Expected Fall 2017  
+  : \ \ \ \ Dissertation Adviser: George Karypis  
+  : M.S. in Computer Science, 2013\
 
 2006--2010  
-  : \tabto{3em}SAINT JOHN'S UNIVERSITY, Collegeville, MN  
-  : \tabto{3em}B.A. in Computer Science, 2010
+
+  : SAINT JOHN'S UNIVERSITY, Collegeville, MN  
+  : B.A. in Computer Science, 2010
 
 ## PUBLICATIONS
 ### Refereed Journal Articles

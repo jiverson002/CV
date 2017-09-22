@@ -3,6 +3,40 @@
 \usepackage[margin=1.0in]{geometry}
 \usepackage[english]{babel}
 
+% suppress page numbering
+\pagestyle{empty}
+
+% suppress section numbers
+\setcounter{secnumdepth}{0}
+
+% modify header spacing
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\filcenter}{}{}{}{\filcenter}
+\titlespacing{\subsection}{0pt}{2\baselineskip}{\dimexpr-\parskip+\baselineskip}
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{-\parskip}
+
+% prevent breaking list items across pages
+\interlinepenalty10000
+
+% override default list environment when the list is ``tight'' 
+\makeatletter
+\providecommand{\tightlist}{
+  \setlength\labelwidth{3em}
+  \setlength\leftmargin{3em}
+  \advance\linewidth 4em
+  \advance\@totalleftmargin -4em
+  \parshape \@ne \@totalleftmargin \linewidth
+}
+\makeatother
+
+\usepackage{etoolbox}
+\makeatletter
+\AtBeginEnvironment{itemize}{%
+  \advance\linewidth -4em
+  \advance\@totalleftmargin 4em
+}
+\makeatother
+
 % change appearance of lists
 \usepackage{enumitem}
 \setlist{%
@@ -14,35 +48,17 @@
 }
 \setlist[itemize,2]{%
   label={},
-  leftmargin=1em,
+  leftmargin=0em,
   before*=\footnotesize,
 }
 \setlist[description,1]{%
   font=\normalfont,
-  labelwidth=3em,
+  labelwidth=7em,
   leftmargin=!,
   labelsep=0em,
   labelindent=0em,
   align=left,
 }
-
-% suppress page numbering
-\pagestyle{empty}
-
-% suppress section numbers
-\setcounter{secnumdepth}{0}
-
-% prevent latex from breaking items across pages
-\interlinepenalty10000
-
-% modify header spacing
-\usepackage{titlesec}
-\titleformat{\section}{\Large\bfseries\filcenter}{}{}{}{\filcenter}
-\titlespacing{\subsection}{0pt}{2\baselineskip}{\dimexpr-\parskip+\baselineskip}
-\titlespacing{\subsubsection}{0pt}{\baselineskip}{-\parskip}
-
-% used by pandoc, but unnecessary
-\providecommand{\tightlist}{}
 
 % undefine a column type, courtesy of
 %   https://tex.stackexchange.com/questions/144434/re-newing-a-column-type
@@ -53,18 +69,12 @@
 \usepackage{longtable}
 \usepackage{tabularx}
 \newcommand\forcenewcolumntype[1]{\undefcolumntype{#1}\newcolumntype{#1}}
-\forcenewcolumntype{l}{>{\raggedright\arraybackslash}p{.5\textwidth}}
-\forcenewcolumntype{r}{>{\raggedleft\arraybackslash}p{.5\textwidth}}
+\forcenewcolumntype{l}{>{\raggedright\arraybackslash}p{.485\textwidth}}
+\forcenewcolumntype{r}{>{\raggedleft\arraybackslash}p{.485\textwidth}}
 \providecommand{\toprule}{}
 \providecommand{\midrule}{}
 \providecommand{\bottomrule}{\\}
 \providecommand{\addlinespace}{}
-
-% this is a hack until i can find a way to use \tightlist to change the
-% \leftmargin of the description environment so that two different styles of
-% description lists can be provided -- it requires the use of \tabto{...} in the
-% markdown file
-\usepackage{tabto}
 
 \begin{document}
 $body$

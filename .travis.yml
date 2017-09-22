@@ -15,15 +15,17 @@ addons:
       - sshpass
 
 script:
-  - pandoc --version
+  # strip build badge before generating tex
   - sed 's/\[\!\[Build Status\].*//' README.md > travis1.md
+  # strip double spaces for pretty github formatting before generating tex
   - sed 's/  $//g' travis1.md > travis2.md
+  - pandoc --version
   - pandoc --template cv.sty -o pre.tex travis2.md
+  # fixup tex before running chktex
   - sed 's/endhead$/endhead{}/g' pre.tex > cv.tex
-  - chktex -W # Print version information.
-  - chktex -q -n 8 cv.tex 2>/dev/null | tee lint.out
-  # If lint output is non-empty report an error.
-  - test ! -s lint.out
+  - chktex -W
+  - chktex -q -n 8 cv.tex 2>/dev/null | tee chktex.out
+  - test ! -s chktex.out
   - pandoc --template cv.sty -o cv.pdf travis2.md
   - export SSHPASS=$DEPLOY_PASS
   - sshpass -e scp -o stricthostkeychecking=no cv.pdf $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH

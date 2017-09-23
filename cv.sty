@@ -38,9 +38,9 @@
 % prevent breaking list items across pages
 \interlinepenalty10000
 
-\newlength\tightleftmargin
-\newlength\wideleftmargin
-\newlength\diffleftmargin
+\newlength\tightleftmargin{}
+\newlength\wideleftmargin{}
+\newlength\diffleftmargin{}
 \setlength\tightleftmargin{3em}
 \setlength\wideleftmargin{6em}
 \setlength\diffleftmargin{\dimexpr\wideleftmargin-\tightleftmargin}
@@ -50,8 +50,8 @@
 \providecommand{\tightlist}{
   \setlength\labelwidth{\tightleftmargin}
   \setlength\leftmargin{\tightleftmargin}
-  \advance\linewidth\diffleftmargin
-  \advance\@totalleftmargin-\diffleftmargin
+  \advance\linewidth\diffleftmargin{}
+  \advance\@totalleftmargin-\diffleftmargin{}
   \parshape\@ne\@totalleftmargin\linewidth{}
   \setlength\itemsep{0pt}
 }

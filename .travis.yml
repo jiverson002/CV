@@ -4,25 +4,29 @@ env:
     - secure: "m9s25P3LsqgkB9fMzUC4jKOxNl5GRjF7655VMSnKN1yzz8h/mYt0PuWu/DJAs0aPtGLthLhYMGggpAQkb0NsElD3ngtu/NjHSKQWkP4BwWji7BGQ3FCq546WGkF//Q093YyuteCHnBx/bYF8MJ7uAQSUhbwm9yME2f1X/l1TEUlje4dsDeO2pfhTGscaH9Rolf+bRpy2HNzme+NbTxSbMdZr+CA083/Fts4CdCuKgYNP9YXLwhAcNRDhJ2D3/IDxs/Xz324QiIDOPITHei8tMQpRn/j0Wu2fxHPNu/VW86CORV+916QPAE9nI/lOvFA0DsNaFhXF/W8hR7ctUT7yS0L7JmjGpD9am1f/RcmdEw2NzrPakNoBGLs+9NRf7sQaj18IsqllMXUzJycJIG3Kp7J0+Vx6xzyTzKgn/jvfazw3RZom4voyJBYmK0P03vVUkp5Bc770Zh0we73ydnFRAWMFF6Q7/rAEwo14wDEKg0u4nNLWGHM5SJmpZngvc7NuiwFRpzSsT3jUDVaut3MhHzijxuXbBliEnU0yy4tdpFXUKGPAQPT2X6goReRMhiEL7USyBAtn+vYSxrDRZYojj0FzZGEyFyBo22tCl/03x0JBwoT5gBCOaQjUzMhVEhoqCsdor7ebMTN5PTQUwSkP+n5+8sG6/qnet4qzPC1jwaw="
     - secure: "blMowtIC2vQRSLtWg6IE0V0L8UrTWHwc1EfJ70UGQBVuonLM8y94v71/ZirUVUjZrX0lPp9jepJfrr9CdVgwY9p5pzEnQin95R6Hbz2VJEJjfn16LLSsPLCOWI/twcKt7ro5N3nf0dMvNigHnE3M0NuE39hq5s7Mby5N1dL4H7Qr5xYEToRncj/haySU9XIB30pEaW28GgjQYEUd+puZpIYHThKf6ocEb+OsTzENFiefjTGiCFj42LNElTPZqODIqHkTpvlUr3re7l9xnS87XqjHzojZV/xIeObR7Bn4w0poXhyRrYkY69vgVi+wvnExxGWEXzK8hktemm1dBUoi66/GIET95QuGJIou2WeB5FMs7QatKdy75Txh5vi+5fBX/EObCEB8uGn9n6hHH51QElRnEp+SNc1F29f91fTq3I5oT5D+AyfEr/M51kUtsZODuU44cAPM1+eROjHNXIed31I022wGjt9MRR6GXgdyTFZRd6j1MmBYYBDcm5UlPUxx+YBBM4e5yyBriChKQ8TrnWY9XmtKw2IiebUMJpWfIUfVMRpPw1XJDPL5dHWEUUPW/md6Tal5QWB/CfwOWGBKZA2yWjOo3UV19GS18zpZXGueuQMgbjg6JNVvWA5vwU1Y8jPjoSivhz1/W3pOuzJdVwB52qnmEQArDzd7wB9/Oro="
     - secure: "YVfHi8TlvYKxXCDGO9410/O+J2XXiezCQVpgZ3BbV54m73Bt7Zw88vEIMBRy9k2mej32z7TbSy+y+2w/5ruz/fO3Fw2lZlZ6uS6pDzkby55btvbX/VPVuj+FE7J/1dwr7+0IAOcuDZEtKyiKy9J5FkFE0S4mYDkVKswwDZ2NXHovLkPubTWz1T1cWC40zLVjzZ5Zcf69PhkqqBPhRmh+YPslGW4fw+9pseyuEz/fvcLnavUTO+zO5GWkxWysxW6w6kyYO3sbnNLFInwpNsD5Kj69b42vxF42tdZ7cnH5ursCZ8N1niG6O+Vx6b+e1hAe2dcgdGJxT7Vrk/IDU4/+Oi+fP02TC5AnIViFflCyLElREQ1gGkRZ5yBKWHFyAwwZePw3g4pBxbMjKiVVhnMzRwiy3aMw9jDLEqki2vsRMFctqs0fJtG3H9if65Oc4doN6z6aeWnzpeMFgPXMVZ5qGAHcRBVvTydzlrM1OEkzrq75GXQzhEeKLPcPAAwFoItJBbRQNnuqbAVe3xO18uMZB4mj9u6ivSy8708d2bLMEBsBP+VeZhUhqk7rZBux+y6bJRFdapf32NQ+qa01Q9FYk+N7gwLIPZtJqX+3ulHUp7wwPmIxVb6UDTqzYHWxtcn6lbSzrvCy5vnVeWM7hevvQZCYNr2P5DSM+q9FMRR/X3c=" 
+    - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
     
 addons:
   apt:
     packages:
-      - pandoc
       - chktex
       - texlive-latex-base
       - texlive-latex-extra 
       - sshpass
 
 script:
+  # Fetch pandoc and pandoc-citeproc binaries
+  - wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb && ar p pandoc-1.19.2.1-1-amd64.deb data.tar.gz | tar zx
   # strip build badge before generating tex
   - sed 's/\[\!\[Build Status\].*//' README.md > travis1.md
   # strip double spaces for pretty github formatting before generating tex
   - sed 's/  $//g' travis1.md > travis2.md
   - pandoc --version
-  - pandoc --template cv.sty -o pre.tex travis2.md
+  - pandoc --template cv.sty -o pre1.tex travis2.md
   # fixup tex before running chktex
-  - sed 's/endhead$/endhead{}/g' pre.tex > cv.tex
+  - sed 's/endhead$/endhead{}/g' pre1.tex > pre2.tex
+  - sed 's/tabularnewline$/tabularnewline{}/g' pre2.tex > pre3.tex
+  - sed 's/tightlist$/tightlist{}/g' pre3.tex > cv.tex
   - chktex -W
   - chktex -q -n 8 cv.tex 2>/dev/null | tee chktex.out
   - test ! -s chktex.out

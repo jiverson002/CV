@@ -26,13 +26,17 @@
   \advance\linewidth4em
   \advance\@totalleftmargin-4em
   \parshape\@ne\@totalleftmargin\linewidth{}
+  \setlength\itemsep{0pt}
 }
 \makeatother
 
 % change appearance of lists
 \usepackage{enumitem}
 \setlist{%
-  nosep,
+  parsep=0pt,
+  topsep=0pt,
+  partopsep=0pt,
+  itemsep=\baselineskip,
 }
 \setlist[itemize,1]{%
   label={},

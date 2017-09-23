@@ -13,7 +13,7 @@
   : UNIVERSITY OF MINNESOTA, Minneapolis, MN  
   : Ph.D. in Computer Science, Expected Fall 2017  
   : \ \ \ \ Dissertation Adviser: George Karypis  
-  : M.S. in Computer Science, 2013\
+  : M.S. in Computer Science, 2013
 
 2006--2010  
 

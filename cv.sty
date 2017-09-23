@@ -38,13 +38,20 @@
 % prevent breaking list items across pages
 \interlinepenalty10000
 
+\newlength\tightleftmargin
+\newlength\wideleftmargin
+\newlength\diffleftmargin
+\setlength\tightleftmargin{3em}
+\setlength\wideleftmargin{6em}
+\setlength\diffleftmargin{\dimexpr\wideleftmargin-\tightleftmargin}
+
 % override default list environment when the list is ``tight'' 
 \makeatletter
 \providecommand{\tightlist}{
-  \setlength\labelwidth{3em}
-  \setlength\leftmargin{3em}
-  \advance\linewidth4em
-  \advance\@totalleftmargin-4em
+  \setlength\labelwidth{\tightleftmargin}
+  \setlength\leftmargin{\tightleftmargin}
+  \advance\linewidth\diffleftmargin
+  \advance\@totalleftmargin-\diffleftmargin
   \parshape\@ne\@totalleftmargin\linewidth{}
   \setlength\itemsep{0pt}
 }
@@ -60,16 +67,16 @@
 }
 \setlist[itemize,1]{
   label={},
-  leftmargin=4em,
+  leftmargin=\diffleftmargin,
 }
 \setlist[itemize,2]{
   label={},
-  leftmargin=4.25em,
+  leftmargin=\dimexpr\diffleftmargin+.75em,
   before*=\footnotesize,
 }
 \setlist[description,1]{
   font=\normalfont,
-  labelwidth=7em,
+  labelwidth=\wideleftmargin,
   leftmargin=!,
   labelsep=0em,
   labelindent=0em,

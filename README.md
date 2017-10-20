@@ -11,7 +11,8 @@
 2010--2017  
 
   : UNIVERSITY OF MINNESOTA, Minneapolis, MN  
-  : Ph.D. in Computer Science, Expected Fall 2017  
+  : Ph.D. in Computer Science, 2017  
+  : \ \ \ \ Dissertation Title: ``*Memory-Constrained Computing*''  
   : \ \ \ \ Dissertation Adviser: George Karypis  
   : M.S. in Computer Science, 2013
 

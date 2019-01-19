@@ -27,7 +27,7 @@
   : ``A Virtual Memory Manager Optimized for Node-level Cooperative
     Multi-tasking in Memory Constrained Systems.''. Jeremy Iverson and George
     Karypis. *The International Journal of High Performance Computing
-    Applications*, 2017.
+    Applications*, Volume 32, Issue 5, 2017.
 
 2015  
   : ``Evaluation of Connected-Component Labeling Algorithms for
